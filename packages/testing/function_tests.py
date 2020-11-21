@@ -5,6 +5,6 @@ Created on Sat Nov 21 13:29:16 2020
 @author: George
 """
 
-from goalCombos import goalCombos
+from packages.scorePaths.GoalCombos import GoalCombos
 
-goalCombos(2,2,1)
+GoalCombos(2, 2, 1)
