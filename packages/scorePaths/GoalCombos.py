@@ -34,6 +34,18 @@ class GoalCombos:
                 else:
                     self.allowed_combos = np.vstack((self.allowed_combos, combo))
 
+    # return the number of valid combos
+    def valid_combo_num(self):
+        dimensions = self.allowed_combos.shape
+
+        if len(dimensions) == 1:
+            if dimensions[0] == 0:
+                return 0
+            else:
+                return 1
+        else:
+            return dimensions[0]
+
     # this function generates an iterable of all possible combinations of 1 and -1
     def _all_combos(self, p_scores, n_scores):
         for positions in itertools.combinations(range(p_scores + n_scores), p_scores):
