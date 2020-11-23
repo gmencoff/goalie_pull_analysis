@@ -12,7 +12,7 @@ from typing import List, Any
 # this class generates acceptable goal combinations based on the number of positive scores
 # negative scores and the allowable difference in goals
 class GenerateCombinations:
-    allowed_combos: List[Any] = []
+    allowed_combos = []
 
     # return the number of valid combos
     def valid_combo_num(self):

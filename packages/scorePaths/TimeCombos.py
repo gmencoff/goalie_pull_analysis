@@ -24,5 +24,12 @@ class TimeCombos(GenerateCombinations):
         # total non-goals is time steps - n goals
         non_goals = time_steps - n_goals
 
+        all_combos = self._all_combos(n_goals, non_goals)
 
         self.allowed_combos = np.array([])
+
+        for combo in all_combos:
+            if np.size(self.allowed_combos) == 0:
+                self.allowed_combos = np.array(combo)
+            else:
+                self.allowed_combos = np.vstack((self.allowed_combos, combo))
